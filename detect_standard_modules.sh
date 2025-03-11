@@ -6,7 +6,7 @@ if [ -n "$1" ]  &&  [ -n "$2" ]; then
     case "$2" in
         17.0)
             echo "NOTE: This will compare to Odoo 17.0 Enterprise Edition's modules"
-            exit 0  #Successful, but need to implement the 17.0 text file first and read it (TO-DO)
+            mapfile -t STANDARD_MODULES < modules_17.0.txt  #Read from the standard 18.0 modules text file
         ;;
         18.0)
             echo "NOTE: This will compare to Odoo 18.0 Enterprise Edition's modules"
